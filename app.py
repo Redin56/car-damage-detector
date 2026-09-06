@@ -11,8 +11,8 @@ model.load_state_dict(torch.load('best_model.pth', map_location=torch.device('cp
 model.eval()
 
 transform = transforms.Compose([
-    transform.Resize((224, 224)),
-    transform.ToTensor()
+    transforms.Resize((224, 224)),
+    transforms.ToTensor()
 ])
 
 label_map = {0: 'Damaged', 1: 'Clean'} #prefered clean here because its faster to grasp
