@@ -11,15 +11,15 @@ model.load_state_dict(torch.load('best_model.pth', map_location=torch.device('cp
 model.eval()
 
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.ToTensor()
+    transform.Resize((224, 224)),
+    transform.ToTensor()
 ])
 
 label_map = {0: 'Damaged', 1: 'Clean'} #prefered clean here because its faster to grasp
 
 def predict(image):
   image = image.convert('RGB')
-  image = transforms(image).unsqueeze(0) # adds a batch dimension because thats what the model expects
+  image = transform(image).unsqueeze(0) # adds a batch dimension because thats what the model expects
 
   with torch.no_grad():
     output = model(image)
