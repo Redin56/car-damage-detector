@@ -7,7 +7,7 @@ from PIL import Image
 model = models.resnet18(pretrained=False)
 model.fc = nn.Linear(model.fc.in_features, 2)
 
-model.load_state_dict(torch.load('best_model.pth'))
+model.load_state_dict(torch.load('best_model.pth', map_location=torch.device('cpu')))
 model.eval()
 
 transform = transforms.Compose([
