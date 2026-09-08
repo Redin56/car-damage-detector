@@ -38,7 +38,7 @@ Automatically identifying vehicle damage from images has real-world use cases in
 
 ### Misclassified Examples
 
-![misclassified grid](misclassified-grid.png)
+![misclassified grid](assets/misclassified-grid.png)
 *Validation images the model got wrong (15 in total). Errors mostly involve lighting, angle, or image quality issues rather than a consistent failure pattern.*
 
 **Deployment:** Packaged as a Streamlit web app, with the trained model loaded via `torch.load(..., map_location='cpu')` for CPU-only inference on Streamlit Community Cloud.
