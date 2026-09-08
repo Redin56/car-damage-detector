@@ -30,7 +30,7 @@ Automatically identifying vehicle damage from images has real-world use cases in
 
 | Damaged | Clean |
 |---|---|
-| ![damaged](assets/gradcam_damaged.png) | ![clean](grad-cam1.png) |
+| ![damaged](grad-cam2.png) | ![clean](grad-cam1.png) |
 
 
 **Deployment:** Packaged as a Streamlit web app, with the trained model loaded via `torch.load(..., map_location='cpu')` for CPU-only inference on Streamlit Community Cloud.
