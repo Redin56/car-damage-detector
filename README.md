@@ -1,6 +1,6 @@
 # Car Damage Detector
  
-A deep learning model that classifies car images as damaged or clean, built as a hands-on project to learn PyTorch from scratch.
+A deep learning model that classifies car images as damaged or clean, built as a project to learn PyTorch from scratch.
  
 ## Demo
  
