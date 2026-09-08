@@ -26,11 +26,15 @@ Automatically identifying vehicle damage from images has real-world use cases in
 - Data augmentation (random horizontal flip, rotation, color jitter) to improve generalization, particularly to reduce false positives on clean cars
 **Evaluation:** Confusion matrix, precision/recall/F1 (via `sklearn.classification_report`), ROC/AUC curve, Grad-CAM heatmaps for interpretability, and a misclassified-image grid to visually inspect model errors.
 
- ### Grad-CAM Examples
+### Grad-CAM Examples
 
-| Damaged | Clean |
-|---|---|
-| ![damaged](grad-cam2.png) | ![clean](grad-cam1.png) |
+![gradcam1](grad-cam1.png)
+
+*Two correctly classified damaged car examples — heatmaps focus on the visible damage regions.*
+
+![gradcam2](grad-cam2.png)
+
+*One correct clean prediction and one misclassification (clean car predicted as damaged) — the heatmap on the misclassified example shows the model focusing on shadows/reflections rather than actual damage.*
 
 
 **Deployment:** Packaged as a Streamlit web app, with the trained model loaded via `torch.load(..., map_location='cpu')` for CPU-only inference on Streamlit Community Cloud.
