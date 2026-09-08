@@ -28,11 +28,11 @@ Automatically identifying vehicle damage from images has real-world use cases in
 
 ### Grad-CAM Examples
 
-![gradcam1](grad-cam1.png)
+![gradcam1](assets/grad-cam1.png)
 
 *Two correctly classified damaged car examples — heatmaps focus on the visible damage regions.*
 
-![gradcam2](grad-cam2.png)
+![gradcam2](assets/grad-cam2.png)
 
 *One correct clean prediction and one misclassification (clean car predicted as damaged) — the heatmap on the misclassified example shows the model focusing on shadows/reflections rather than actual damage.*
 
